@@ -1,0 +1,788 @@
+[
+  {
+    "kind": "skill",
+    "key": "aliyun-ecs-connect",
+    "sourceHash": "d12d1c968adb726d6b5b6b3dc4d7a4db6c08fbd4221a58dfaba41cb2850921c4",
+    "descriptionZh": "通过 CLIProxyAPI Electron 和阿里云 ECS Workbench 安全接入新 ECS，之后让 Codex 用专用 ED25519 密钥与固定主机指纹执行命令。适用于“连接/接入新 ECS”、“打开 Workbench 配置 SSH”、“让 Codex 操作这台阿里云主机”以及复用已接入 ECS 的命令行连接。"
+  },
+  {
+    "kind": "skill",
+    "key": "anatomy",
+    "sourceHash": "c6cea14176202506b5134ea41088098a43f6507dc0530d105aaa1786f1da28aa",
+    "descriptionZh": "制作精细、可交互的等距 SVG 图，将技术概念表现为试验台、仪表、抽屉柜、绘图仪或锁等实体物件。支持细小实体部件、四阶明暗、正确绘制层次、带标题与实时读数的卡片，以及平缓动画。适用于文档、博客、落地页和文章中的等距插图、技术示意图、Linear 风格绘图及系统、算法或组件原理讲解。支持直接用 TypeScript/JS 生成 SVG 和 HTML，也支持 React/Next.js；可加入同一等距视角下的火焰、排气、水面、焦散和灯光等 WebGL 效果。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-article-illustrator",
+    "sourceHash": "ce97427a061f16ea147133347e620f13b357abdffd443efcd2c87c65eb570243",
+    "descriptionZh": "分析文章结构，找出需要视觉辅助的位置，结合类型、风格和配色三个维度生成插图。适用于为文章配图、添加图片或生成文章插图。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-comic",
+    "sourceHash": "a75c14d4bd29a7aa2a65f0000a629a3926cb393dad97331f49ea048ab5b60162",
+    "descriptionZh": "创作支持多种画风与语气的原创知识漫画和教育漫画，提供详细分镜布局并支持批量生图。适用于知识讲解、人物传记、教程漫画或 Logicomix 风格漫画。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-compress-image",
+    "sourceHash": "a46d343b4a7285243bf04e0fd48fa5f0eda0720279a442265998d935514ffaab",
+    "descriptionZh": "自动选择工具，将图片压缩为 WebP（默认）或 PNG。适用于压缩图片、优化图片、转换为 WebP 或减小图片文件体积。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-cover-image",
+    "sourceHash": "2d55b57e1140223e5f34a9e4a6d20be3232f86da8a7fa3be8a15dde1a00b6283",
+    "descriptionZh": "结合类型、配色、渲染、文字和氛围五个维度，使用 11 种配色与 7 种渲染风格生成文章封面。支持电影宽幅（2.35:1）、宽屏（16:9）和方形（1:1），适用于生成封面图或制作文章封面。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-danger-gemini-web",
+    "sourceHash": "4bded42c66f516d2b799314d2b261bdeccfb68278493350f8ccfeba4ad4d0869",
+    "descriptionZh": "通过逆向实现的 Gemini Web API 生成图片与文本，支持提示词生图、参考图视觉输入和多轮对话。适用于明确要求使用 Gemini 生图或生成文本、需要视觉理解的 AI 生成，或为其他技能提供生图后端。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-danger-x-to-markdown",
+    "sourceHash": "30e3727d3e973b7ee4e7127836aaf814e19d9641c8223076037f2707549b90cd",
+    "descriptionZh": "将 X（Twitter）帖子和文章转换为带 YAML 元信息的 Markdown。使用逆向实现的 API，需要用户同意。适用于保存帖子、将帖子转为 Markdown，或转换用户提供的 x.com / twitter.com 链接。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-diagram",
+    "sourceHash": "64d07943f12fa2c5899f80ad09e49491ebba3d58f9276f9ef96f33f65d64dd0a",
+    "descriptionZh": "制作专业的深色主题 SVG 图，包括架构图、流程图、时序图、结构图、思维导图、时间线和概念示意图。适用于展示系统、流程、数据流、组件关系、网络拓扑、决策树、组织结构或状态机，也适用于将提供的内容可视化。始终输出可独立使用的 .svg 文件。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-electron-extract",
+    "sourceHash": "299a6a21b959e05f563fce97cbea8d3b6d243b5cd632b12d72873aa77e7b1ae8",
+    "descriptionZh": "从已安装的 Electron 应用 .asar 包中提取资源与 JavaScript；有 .js.map 时恢复原始源码，否则使用 Prettier 格式化压缩代码。适用于提取或检查 Electron 应用源码、查看 app.asar，以及了解桌面 Electron 应用的实现。跳过 node_modules，支持 macOS 与 Windows。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-format-markdown",
+    "sourceHash": "49ba8e99374a2e787bca27f7ecdc179658e635708ce17ab682f7ed80328bd944",
+    "descriptionZh": "为纯文本或 Markdown 添加并整理元信息、标题、摘要、层级标题、加粗、列表和代码块。适用于格式化 Markdown、美化文章或改善排版，输出为 {filename}-formatted.md。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-image-gen",
+    "sourceHash": "3ddffd7221528d97db03b316a0bce39609e8b98ad1aa060a985bbc12d8ddf78e",
+    "descriptionZh": "通过 OpenAI GPT Image 2.5、Azure OpenAI、Google、OpenRouter、DashScope、Z.AI GLM-Image、MiniMax、即梦、Seedream、Replicate 和 Agnes API 生成图片。支持文生图、参考图、画幅比例，以及从已保存提示词文件批量生图。默认顺序生成；用户已有多个提示词或需要稳定的多图吞吐时使用并行批量生成。适用于生成、创作或绘制图片。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-infographic",
+    "sourceHash": "6bd5becbb690c185fbc78351665b71b19b3c634d86c00a4c88afc447e5eb9eee",
+    "descriptionZh": "结合 21 种布局与 22 种视觉风格制作专业信息图。分析内容并推荐布局与风格组合，生成可用于发布的信息图。适用于信息图、视觉摘要、内容可视化或高密度信息大图。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-markdown-to-html",
+    "sourceHash": "54fd611cca3270e03a792b0bf4b39e2b073dc70e3b6ae1d4f17dcb82fab3184e",
+    "descriptionZh": "将 Markdown 转为带样式、兼容微信公众号主题的 HTML。支持代码高亮、数学公式、Mermaid（通过无头 Chrome 渲染为 PNG）、PlantUML、脚注、提示块、信息图，以及可选的外链底部引用。适用于 Markdown 转 HTML、微信外链转底部引用或生成排版后的 HTML。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-post-to-wechat",
+    "sourceHash": "64012eaf18b8e9bde6b61dd77b15caf19d7d59f0d4f05f7e87bae3bc85c9ddd8",
+    "descriptionZh": "通过 API 或 Chrome CDP 将内容发布到微信公众号。支持以 HTML、Markdown 或纯文本发布文章，也支持多图片贴图（原图文）。Markdown 文章默认将普通外链转为底部引用，便于公众号展示。适用于发布公众号文章、贴图或图文。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-post-to-weibo",
+    "sourceHash": "dffe46466ffcec0318d0d9576d8904213c94980d7050fd5bec9026b05a088b98",
+    "descriptionZh": "发布微博内容，支持带文字、图片和视频的普通微博，以及通过 Chrome CDP 发布 Markdown 头条文章。适用于写微博、发微博、分享内容到微博或发布微博头条文章。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-post-to-x",
+    "sourceHash": "85580b91830c9d4ba6eaa8d3c14b2bb865c26f692d96a45df78b1b33f01ff862",
+    "descriptionZh": "将内容与文章发布到 X（Twitter），支持带图片或视频的普通帖子，以及长篇 Markdown X Articles。在 Codex 中，明确要求 Chrome 插件或 @chrome 时使用 Chrome Extension 流程；否则优先使用可用的 Chrome Computer Use，仅在获准时回退到真实 Chrome CDP 脚本。适用于发帖、发推或分享到 X。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-slide-deck",
+    "sourceHash": "61e7fdecef075af67e108e001d854dc3f4b993ec6d15f2f0907d3101a7e4a6b4",
+    "descriptionZh": "根据内容生成专业演示文稿图片：先编写带风格说明的大纲，再逐页生成幻灯片图。适用于制作幻灯片、演示文稿、PPT 或整套演示页。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-translate",
+    "sourceHash": "577dde7e5722c2079bfa2f4a037455e52d4d6f6e9931fd126d7fd713c9603b6c",
+    "descriptionZh": "翻译文章、文本、链接或文件，支持快速、普通、精细三种模式和自定义术语表。适用于中英文互译、改成中文或英文、本地化、精翻和译文校对，以及带有明确翻译意图的 URL 或文件。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-url-to-markdown",
+    "sourceHash": "f360c688ecc40fb1aecb0a605a4359849b86ae43fb75306ceb225729c047b452",
+    "descriptionZh": "使用 baoyu-fetch CLI 抓取网页并转换为 Markdown，基于 Chrome CDP 和站点适配器。内置支持 X/Twitter、YouTube 字幕、Hacker News 讨论，以及通过 Defuddle 处理普通网页；可通过交互等待模式处理登录和验证码。适用于将网页保存为 Markdown。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-wechat-summary",
+    "sourceHash": "cfdf8d6cec0bbf09631cb39be4d728456a8a5b58ad2e97adc883800a7c9b35a6",
+    "descriptionZh": "使用本地 wx-cli（https://github.com/jackwener/wx-cli）将微信群聊精华整理为结构化摘要。默认生成普通版，只有用户明确要求时才增加毒舌版。持续维护各群的历史记录（history.json、history-digests.jsonl）、用户画像及事实记忆（memory.md），并遵守隐私边界。适用于群聊总结、指定群和时间范围的讨论回顾、筛选值得看的内容，以及回溯或初始化画像。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-xhs-images",
+    "sourceHash": "95c8426c8c1ec3dd6e72f8560691b8b83970cd7802d62cc3c40b67514930f742",
+    "descriptionZh": "结合 12 种视觉风格、8 种布局和 3 种配色，将内容拆成 1–10 张适合社交媒体传播的卡通风格信息卡片。适用于小红书图片、种草图、小绿书、微信图文或贴图、图片卡片及系列信息图。"
+  },
+  {
+    "kind": "skill",
+    "key": "baoyu-youtube-transcript",
+    "sourceHash": "5d537f09e00c9a733b610b53654c4747e01504507e2dc4fe2eb00fbb0c58ed71",
+    "descriptionZh": "通过 YouTube 链接或视频 ID 下载转写、字幕与封面图。支持多语言、翻译、章节和说话人识别，并缓存原始数据以便快速重新排版。适用于提取 YouTube 字幕、视频转写或封面图片。"
+  },
+  {
+    "kind": "skill",
+    "key": "dataworks-ops",
+    "sourceHash": "afa50d16dac1aa4265571bed2e0916da8ea6ed294cd1aac7ca201a95237714a2",
+    "descriptionZh": "操作阿里云或集团内部 DataWorks（Datawork、Data Studio）进行 MongoDB 到 ODPS/MaxCompute 的同步配置、补数据、失败实例重跑、大记录故障排查和源到报表对账。用户要求继续同步、补完账期、检查补数进度或修正同步数据时使用；单纯页面样式或离线数据分析不适用。"
+  },
+  {
+    "kind": "skill",
+    "key": "dingtalk-doc-rw",
+    "sourceHash": "60b54dfbfeb3f635f8116e58588c95a0287868564993fe361cb9160cc110d16e",
+    "descriptionZh": "通过已配置的钉钉 MCP 网关读取、搜索、创建、更新、追加、移动和整理钉钉／阿里文档与知识库文件夹。适用于 alidocs.dingtalk.com 链接、阅读或总结钉钉文档，以及文档和文件夹管理。处理钉钉文档链接时优先使用该技能，而非浏览器访问。"
+  },
+  {
+    "kind": "skill",
+    "key": "pdc",
+    "sourceHash": "c627f19d107d7ab99706db9de7ddff0136fcc75514697097ed44a946588085df",
+    "descriptionZh": "PDC（Product Design Code，产品设计文档即代码）全生命周期能力套件：0-1 基线生成、存量补建、1-N 增量生成、PDC 合并和 PDC Review 审查和业务测试用例生成，一个入口按场景自动路由。检测并迁移 `.paw` PDC 数据，将基线 PDC 写入项目 `docs/pdc/baseline/`、增量 PDC 写入 `docs/pdc/delta/`，并通过外部 OpenAPI 上报 run、event、artifact 和使用统计。"
+  },
+  {
+    "kind": "skill",
+    "key": "pdf",
+    "sourceHash": "887d6e9393fe4972736faa43d4856a48eb777e59be4dd2083c8d8b586c3d87b4",
+    "descriptionZh": "在版式和渲染效果重要时读取、创建或审查 PDF。优先通过 Poppler 渲染页面进行视觉检查，并使用 reportlab、pdfplumber、pypdf 等 Python 工具生成或提取内容。"
+  },
+  {
+    "kind": "skill",
+    "key": "photo-abstract-editorial",
+    "sourceHash": "1d6cb58fcec7a5824fffb22ca180c7398cb62afd2ba56a534e0ce634fffc152a",
+    "descriptionZh": "根据上传的照片分别生成两张抽象编辑风格图片：一张不含文字的简洁抽象图，以及一张带简短文案的版本。适用于将照片提炼为极简视觉作品，两个成品均不展示原照片。"
+  },
+  {
+    "kind": "skill",
+    "key": "playwright",
+    "sourceHash": "a81d91c721c00bfe6e5f2a714848dc3436549ab28f34aac5d54886c42e87e4bc",
+    "descriptionZh": "通过 playwright-cli 或随附封装脚本，在终端中自动操作真实浏览器。适用于网页导航、填写表单、快照、截图、数据提取和界面流程调试。"
+  },
+  {
+    "kind": "skill",
+    "key": "pocket-cli-skill",
+    "sourceHash": "c71636ff8c1a3abbdcbfb06bfea3f66d9fe3362ef6d1d8df8ec4c8462ac01b6b",
+    "descriptionZh": "使用 pocket-cli 上传、发布、查询、读取、总结、打开和更新 Pocket 文档，管理文档元信息与本地映射。用户要求操作 Pocket 文档时使用；本次任务的最终交付物是可独立预览的 HTML 页面、静态网站或 Web demo 时也使用，以提供发布建议。代码片段、测试 fixture、邮件或文档中的 HTML 示例，以及未形成独立网页交付物的普通前端代码修改，不触发交付提醒。"
+  },
+  {
+    "kind": "skill",
+    "key": "pua-debugging",
+    "sourceHash": "276367aa66b569b327aacd201d764c200e0630a1bc53c227159c5882f9378ad1",
+    "descriptionZh": "结合职场 PUA 式措辞与结构化调试方法，推动穷尽式排查。适用于同一任务已失败至少两次或反复微调无进展、未经验证就归因环境或准备放弃、被动等待而未检索源码或验证，以及用户表达反复失败的不满。也用于复杂多步骤调试、环境与配置问题、部署失败等容易过早放弃的场景，涵盖代码、配置、研究、写作、部署、基础设施和 API 集成。首次失败或已在执行明确修复时不触发。"
+  },
+  {
+    "kind": "skill",
+    "key": "query-internal-logs",
+    "sourceHash": "b9182302248069aea50b130bfee4cfcb2dcc52f404087034b8e52412c5d31221",
+    "descriptionZh": "使用 Normandy CLI 安全查询阿里内部服务日志，涵盖 BUC 认证、应用与 SLS 资源发现、限定时间窗口的 SLS 检索、Pod 日志回退、链路关联和基于证据的代码诊断。适用于线上、预发、日常日志排查，以及按 traceId、时间、URI、用户或错误码定位内部服务问题。"
+  },
+  {
+    "kind": "skill",
+    "key": "research-dossier",
+    "sourceHash": "49a442a13e579297b99f6eb6ffb0818f2117ccc798b4d925b1c53c8a50ab1d12",
+    "descriptionZh": "对主题开展多来源深度调研，通过网页搜索、抓取与批判分析，产出可独立查看的 HTML 报告，并内嵌可下载的 Markdown 源文。适用于 AI/ML 系统、技术对比、市场和竞品分析、学术文献、时事，以及需要综合调查、摸底、盘点或深入分析的主题。不用于单点事实查询、天气、代码修改或简单问答。"
+  },
+  {
+    "kind": "skill",
+    "key": "skill-evaluator",
+    "sourceHash": "0b84c9add3ca9a997ef2fed44d27c8273d69f8e5221a30b7c36fdfe7b1008a9c",
+    "descriptionZh": "按 D1 可发现性、D2 指令清晰度、D3 功能正确性、D4 安全性和 D5 可维护性五维框架评估 Anthropic Agent Skill 包质量。支持 ZIP、目录或单个 SKILL.md，输出含雷达图、得分明细、否决信号和可执行改进建议的独立 HTML 报告及 Markdown 备份。适用于技能评估和合规检查；不用于单纯读取 SKILL.md、创作新技能、运行被评估技能或解释技能概念。"
+  },
+  {
+    "kind": "skill",
+    "key": "imagegen",
+    "sourceHash": "f1c2ab6d5b6fd006084c5249589fcb53df92b417c701144808bca3139df97fb5",
+    "descriptionZh": "生成或编辑照片、插图、纹理、精灵图、效果稿和透明背景抠图等位图素材。适用于新建图片、改造已有图片或根据参考图生成变体，并且交付物应为位图的场景。若更适合修改现有 SVG／矢量或代码素材、扩展既有图标或标志体系，或直接用 HTML/CSS/canvas 实现，则不使用。"
+  },
+  {
+    "kind": "skill",
+    "key": "openai-docs",
+    "sourceHash": "c8608fa64498f399e7a0c70a05bd19bae75a15619f974d0881e2ab5279cfc113",
+    "descriptionZh": "处理 Codex 的模型与定价、计划任务、技能、设置、安装、排障、定制、自动化及自身能力问题，也适用于 OpenAI API、产品和 ChatGPT Work。涵盖模型选择与迁移、提示词、SDK、Responses、Realtime、智能体、评测，以及 Chat、Work、Codex 的比较。不用于仅提及 Codex 的普通应用或软件任务。"
+  },
+  {
+    "kind": "skill",
+    "key": "skill-creator",
+    "sourceHash": "7d7e211eb5867130a0288b350817088089b658a0065d3e881773b5aed5f6b7e4",
+    "descriptionZh": "创建或更新 Codex 技能，编写范围适当的指令，并按需提供配套资源。"
+  },
+  {
+    "kind": "skill",
+    "key": "skill-installer",
+    "sourceHash": "70e761fea891cb94790c9b666181774eef30268a7091b3eb4950b720cdaa169e",
+    "descriptionZh": "从精选目录或 GitHub 仓库路径将 Codex 技能安装到 $CODEX_HOME/skills。适用于列出可安装技能、安装精选技能，或从其他仓库（含私有仓库）安装技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "visualize",
+    "sourceHash": "7155b2e45e9fcd506ab6801c3701be7c239693b77f3340c2b66254c07e1854a4",
+    "descriptionZh": "直接在对话中创建可视化内容与交互工具，用于解释原理、探索条件变化、比较或检查内容，以及制作模拟、地图、图表、关系图和界面效果稿。静态科学图表应使用标准绘图工具。"
+  },
+  {
+    "kind": "skill",
+    "key": "intake",
+    "sourceHash": "ac2d10ff51c22520dd4df4664b900b942a4a604d34e6bf27e6d54c4fc3f19d50",
+    "descriptionZh": "在用户明确提到 Creative Production 但没有具体任务、询问其能力，或希望开始创作却尚缺选择流程所需背景时使用，帮助厘清需求并选择合适流程。"
+  },
+  {
+    "kind": "skill",
+    "key": "produce",
+    "sourceHash": "b53d776de8a83b84ad02f997dae218a1c46dd2a525e4af99e64d8891f829abaf",
+    "descriptionZh": "创作、探索、改编、细化、润色或审查视觉创意，涵盖营销活动、广告、社交内容、产品图、场景、促销、标志、品牌体系、风格、图表、演示文稿及其他营销设计素材。"
+  },
+  {
+    "kind": "skill",
+    "key": "analyze-data-quality",
+    "sourceHash": "a199a16b6d6a293c85694459ed6ed010fe37eba5b4a09c7c7dd0264ea7e3a109",
+    "descriptionZh": "检查结构化数据集和查询结果是否足够可靠，排查数据时效性、粒度、缺失、重复、关联错误、结构漂移及来源结果冲突等数据质量风险。"
+  },
+  {
+    "kind": "skill",
+    "key": "build-dashboard",
+    "sourceHash": "327c9578fa9f05b12a6e0f727474312b9012e378f25e08e940a3310a3e74d87b",
+    "descriptionZh": "根据已连接的数据、上传的表格、CSV 或其他结构化来源，创建或更新有来源依据的交互式仪表盘，用于监测、探索和运营决策。"
+  },
+  {
+    "kind": "skill",
+    "key": "build-report",
+    "sourceHash": "7d967fec9050f52f36bd388d2fc3c31cb781a997e37d740e8bec075ce0bdee3d",
+    "descriptionZh": "面向管理层、产品、业务或技术读者编写专业分析报告。适用于需要形成持久报告、并以可核查证据支撑结论的任务。"
+  },
+  {
+    "kind": "skill",
+    "key": "create-data-context",
+    "sourceHash": "18c5b892fa5976aeeb5a9b505df198245cb898419c41a6f3e8153e7384b89158",
+    "descriptionZh": "创建、更新或分享可复用的分析、报告和仪表盘上下文，涵盖工具偏好、视觉风格、分析惯例与数据定义。适用于记住后续任务的工作要求、保存约定或维护已有上下文。"
+  },
+  {
+    "kind": "skill",
+    "key": "design-kpis",
+    "sourceHash": "94527f38a85f919fac14e08e3643631bf1322ca13eb2448d0cc42ecd749741c6",
+    "descriptionZh": "设计 KPI 框架、指标定义、目标、约束指标与衡量方案，为产品或业务决策服务。适用于定义或改进成功指标、驱动因素、目标和衡量方式。"
+  },
+  {
+    "kind": "skill",
+    "key": "gather-business-context",
+    "sourceHash": "d6ad00895f36536eee5642c92da23e85a4da56313e48fa0c0b794710e310a003",
+    "descriptionZh": "从已连接或用户提供的来源收集业务背景，为后续分析明确问题框架。适用于尚不清楚指标含义、近期变化或应检查哪些来源的情况。若请求还包含诊断、建议或交付物，先补齐背景，再继续相应专项分析。"
+  },
+  {
+    "kind": "skill",
+    "key": "jupyter-notebooks",
+    "sourceHash": "e0fb41990964dece42eeadca40ebe11bcddd0fb17244b8d635820278801200a2",
+    "descriptionZh": "创建、编辑或验证可复现的 SQL、Python Notebook。适用于笔记本、SQL/Python 探索草稿、可重复运行的分析、审计记录，以及便于复查或重新执行的配套文件。"
+  },
+  {
+    "kind": "skill",
+    "key": "kpi-reporting",
+    "sourceHash": "65b3771da612e631434201c81756e0085257a35860fda23420d8a5c297244219",
+    "descriptionZh": "依据量化业务或产品指标制作 KPI 解读、记分卡、WBR/MBR/QBR 更新和管理层摘要。适用于汇报状态、对照目标、解释已验证的驱动因素，并说明运营影响。"
+  },
+  {
+    "kind": "skill",
+    "key": "market-sizing",
+    "sourceHash": "941c342857e0d980496b3919a054e2fb00dd60c301fb5e3379ebe37483e83398",
+    "descriptionZh": "在明确假设与不确定性的前提下，估算市场、细分市场或机会规模。适用于 TAM/SAM/SOM、不同情景的规模测算，以及比较潜在机会的大小。"
+  },
+  {
+    "kind": "skill",
+    "key": "metric-diagnostics",
+    "sourceHash": "fdd020e1790e9b336661750f50650022edb2184262a7cca1b0935081398f11c1",
+    "descriptionZh": "诊断指标为何变化或偏离预期，识别指标波动、异常、缺口或结果差异的可能驱动因素。"
+  },
+  {
+    "kind": "skill",
+    "key": "product-business-analysis",
+    "sourceHash": "9713299d3ec2101c1d57274909dda13118d6637968548c1d931ba091a2ff18de",
+    "descriptionZh": "分析产品或业务数据，为决策和建议提供指标证据。适用于选择方向、确定机会优先级、评估变化、用户分群、量化权衡或决定下一步行动。"
+  },
+  {
+    "kind": "skill",
+    "key": "publish-artifact-to-sites",
+    "sourceHash": "d53703e71a5d154189e99dae10a9da91390f823cf606984d016b68f8dd026d81",
+    "descriptionZh": "将已有 Data 报告或仪表盘发布到 Sites；适用于网页／云端任务中的自动发布，或用户明确要求发布的情况。"
+  },
+  {
+    "kind": "skill",
+    "key": "validate-data",
+    "sourceHash": "9e6b3d1283b1e5582b565141caaadc5cd85e9e6c413874f040ffc0b6a0c18cde",
+    "descriptionZh": "验证分析方法、来源、计算、图表和结论，同时检查报告与仪表盘的完整性、可用性，并实施有依据的修正。"
+  },
+  {
+    "kind": "skill",
+    "key": "visualize-data",
+    "sourceHash": "9d96702627767ca51afd3da0319a47bd7b3f9188152e7a737d0a0a213ae6be35",
+    "descriptionZh": "在编写报告、仪表盘、Notebook 等持久交付物时，设计、制作、修改并验证定量图表。对话中的内嵌图表不使用此技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-code-connect",
+    "sourceHash": "575178fc0b1c0670aa605ece0af5ee7984b7dc3bb35b9fa52c63f3440c377567",
+    "descriptionZh": "创建和维护 Figma Code Connect 模板文件，将 Figma 组件映射到代码片段。适用于 Code Connect、Figma 组件映射、设计转代码，以及创建或更新 .figma.ts / .figma.js 文件。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-code-workflows",
+    "sourceHash": "b0e4952bcfae1f68714a62a5adbcc9d0e37d42963034c5d9ef2dc6dcae9f8985",
+    "descriptionZh": "将本地 HTML 或项目文件导入 Figma，选择可编辑的 Design 图层、可运行的 Code Layer 或独立 Code（Make）文件，并修复导入预览。仅在用户明确指定这些交付形式，或提供目标 Figma 文件 key／链接时使用；普通代码或代码组件请求应先明确输出形式。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-create-new-file",
+    "sourceHash": "0f61926d2e2046ffe034c5233fc91209593edbdad9a3107d3cd0865a04a22a83",
+    "descriptionZh": "创建新的 Figma Design、FigJam 或 Slides 文件。用户要求新建这些文件时使用，并在每次调用 create_new_file 工具前加载本技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-design-to-code",
+    "sourceHash": "9e495a42085b6e6fadf01d0907d075b51c505e8e75d0e95b1205626a8fe21241",
+    "descriptionZh": "将 Figma 设计实现、迁移或编写为代码，提供正确实现设计所需的步骤与约束。每次调用 Figma get_design_context 工具前必须先加载，适用于根据 Figma 制作页面、界面或组件的请求。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-generate-design",
+    "sourceHash": "5e86317e191fd1b02c57132171529de4bf4b15452f96a07fdb553f7c7669d880",
+    "descriptionZh": "与 figma-use 配合，将应用页面、多区块视图或界面描述构建到 Figma，或让已有 Figma 页面与代码保持一致。适用于完整页面、弹窗、对话框、抽屉、侧栏和面板。从 Code Connect、现有界面及组件库中查找组件、变量与样式，再按区块导入和组装，使用设计系统 token 而非硬编码样式值。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-generate-diagram",
+    "sourceHash": "679885b3857ffb32138afbee261cbdee0439c6c9ff30bdfd16b486438727b5e2",
+    "descriptionZh": "在 FigJam 中生成流程图、架构图、时序图、ERD、状态图、甘特图、时间线等图示；也适用于 Mermaid、决策树、依赖图、API 调用流、认证握手、数据结构与流水线可视化。每次调用 generate_diagram 前必须加载本技能，以选择对应指导并遵守 Mermaid 约束；思维导图、饼图、类图等场景会指引改用合适形式或跳过该工具。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-generate-library",
+    "sourceHash": "4ffc761bbb7a67515ff7a72806fd6956161bef4f60566a1aa6527dccc68dcdce",
+    "descriptionZh": "根据代码库在 Figma 中建立或更新设计系统，涵盖变量与 token、组件库、变体和变量绑定、明暗主题、基础规范文档及设计与代码差异修复。创建单个组件时也适用，以保证变量、状态和 token 绑定完整。说明构建内容与顺序；应与负责 Plugin API 调用方式的 figma-use 一同加载。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-generative-plugins",
+    "sourceHash": "831c33dd398dda38e6da647d957eb96228050fa42e227f3e0ebfc78b2e879a37",
+    "descriptionZh": "创建、编写、修改、修复或扩展可复用的 Figma 生成式插件。每次调用 create_generative_plugin 或 update_generative_plugin 前必须先加载本技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-implement-motion",
+    "sourceHash": "ba264cdf720b4d26095d0e1b111d31daed43e7f45909171777518cd6cb245f49",
+    "descriptionZh": "将 Figma 动效和动画转为可用于产品的代码实现。适用于实现 Figma 动效、为组件添加动画、处理含动画节点的 Figma 链接，或 get_design_context 返回动效信息并要求读取 get_motion_context 的情况。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-shaders",
+    "sourceHash": "90e90d8b3e18ccdf1e6b7b329720487f332b7b4ee3a09f3847baa76cd4f830ec",
+    "descriptionZh": "在 Figma 中创建、编写、修改、修复或迭代着色器效果、着色器填充、自定义效果／填充及程序化着色器。每次调用 create_shader 或 update_shader 前必须先加载本技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-spec",
+    "sourceHash": "55d0498f384ed42a991eedd703f665ccf5f578c62d1e08af34e3a3ad16e3214b",
+    "descriptionZh": "创建、读取、编辑、审查或评论 Figma 规格文档。适用于独立 Figma spec，以及嵌入 Figma Design 或 FigJam 中的 PRD、简报、RFC 等文档，处理前须先阅读本技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-swiftui",
+    "sourceHash": "33d09760d05751e04063d2eef656c842ad93d693fdcc17f0bc63cc549c2e4dc9",
+    "descriptionZh": "在 SwiftUI 与 Figma 之间双向转换：将 Figma 设计实现为 SwiftUI，或将 SwiftUI 视图、页面和 token 写回 Figma。适用于 Swift、SwiftUI、iOS、iPhone、iPad 相关转换，以及 Figma 链接与 .swift／.xcodeproj 同时出现的任务。按方向加载专项参考；代码转设计时与 figma-use 配合。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-use",
+    "sourceHash": "b354bcce8a443fa83898b3f4d57b2a47fa92bbc53813e666ad644406277983dd",
+    "descriptionZh": "在 Figma 文件上下文中通过 JavaScript 执行写入或专项读取，包括增删改节点、设置变量或 token、创建组件与变体、修改自动布局和填充、绑定变量及程序化检查结构。每次调用 use_figma 前必须加载本技能，以避免常见且难排查的错误。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-use-figjam",
+    "sourceHash": "f21001ed210705bf1ed31071fbc44c5fb09305e7d2bf41c0ec607f80e245f084",
+    "descriptionZh": "提供在 FigJam 中使用 Figma use_figma MCP 工具的专项指导，可与讲解基础调用方式的 figma-use 配合使用。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-use-motion",
+    "sourceHash": "7de6b48f57a320556c4b9959c2bccb227e0f721793c66223a39267ed7e891807",
+    "descriptionZh": "为 use_figma 提供动效指导，涵盖手动关键帧、动画样式、缓动与时间线时长。在节点上添加、编辑或检查动画时，与 figma-use 一同加载。"
+  },
+  {
+    "kind": "skill",
+    "key": "figma-use-slides",
+    "sourceHash": "ea928a51d28d4cedc3b16ae4eba15b6dcf8c700d856171f4b9ee2cb3be781911",
+    "descriptionZh": "提供在 Figma Slides 中使用 use_figma MCP 工具的专项指导，可与讲解基础调用方式的 figma-use 配合使用。"
+  },
+  {
+    "kind": "skill",
+    "key": "heygen-workflows",
+    "sourceHash": "bfc5bc2df7b29873eae233781459494c71b1d58a8677f1b4d6d4d53d4641778b",
+    "descriptionZh": "使用 HeyGen 制作数字人口播视频、HeyGen Video 1 通用 AI 短片，并处理视频、数字人、声音、翻译及媒体工作流。"
+  },
+  {
+    "kind": "skill",
+    "key": "gsap",
+    "sourceHash": "dcc91731c4945b53b9a926bba6cad4fd2e9f13984d6ff4906e6053d2bbc86047",
+    "descriptionZh": "提供 HyperFrames 中的 GSAP 动画参考，涵盖 gsap.to()、from()、fromTo()、缓动、交错、默认值、时间线、位置参数、标签、嵌套和播放控制，以及 transforms、will-change、quickTo 等性能用法。适用于编写 HyperFrames 合成中的 GSAP 动画。"
+  },
+  {
+    "kind": "skill",
+    "key": "hyperframes",
+    "sourceHash": "e79cfa3325e836f37a322850a2d2e8f6e8016a15cc61cb75f97574c093919fc5",
+    "descriptionZh": "用 HyperFrames HTML 创建视频合成、动画、标题卡、叠加层、字幕、旁白、音频响应视觉和场景转场。适用于 HTML 视频、同步字幕、文本转语音、随音乐节拍变化的动画、文字强调特效，以及淡入淡出、擦除、揭示或着色器转场。涵盖创作、时序、媒体与完整视频制作流程；命令行操作见 hyperframes-cli。"
+  },
+  {
+    "kind": "skill",
+    "key": "hyperframes-cli",
+    "sourceHash": "56ae641472517a88721df32027a170838475db11bf25a2767281662a7d25bff3",
+    "descriptionZh": "使用 HyperFrames CLI 执行 init、lint、inspect、preview、render、transcribe、tts、doctor、browser、info、upgrade、compositions、docs 和 benchmark。适用于搭建项目、检查与验证合成、查看布局、Studio 预览、渲染视频、音频转写、生成语音及环境排障。"
+  },
+  {
+    "kind": "skill",
+    "key": "hyperframes-registry",
+    "sourceHash": "c3717735e1b665002884bc6c976a89c791a03d3e7a3c86a5109ae907d43ab54c",
+    "descriptionZh": "将 registry 中的区块和组件安装并接入 HyperFrames 合成。适用于 hyperframes add、安装区块或组件、接入 index.html，以及处理 hyperframes.json；涵盖安装位置、子合成接线、组件片段合并和 registry 发现。"
+  },
+  {
+    "kind": "skill",
+    "key": "website-to-hyperframes",
+    "sourceHash": "4b8e7efa4d11816ca8fccd42dc33566323f3b22b71c8918692a375da5423708b",
+    "descriptionZh": "抓取网站并制作 HyperFrames 视频。适用于将用户提供的网站链接转成视频、网站宣传片、社交广告或产品导览，以及用户分享链接并要求相关视频内容的情况；即使只粘贴了一个 URL，也可使用此技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "maintain-space",
+    "sourceHash": "739d1681c4f4a9ae40f6f975cc9ac0fd735a6a77510dcbe736e5239443a165ef",
+    "descriptionZh": "用户要求维护 ChatGPT Pages 或 Space 时，将新证据整合到已有内容。直接文字修正使用 write-page；不用于普通对话草稿、写作或建议，也不将选中页面视为保存授权。只有用户提出时才安排后续定期维护。"
+  },
+  {
+    "kind": "skill",
+    "key": "manage-schedules",
+    "sourceHash": "7778f60f6951cf8e5f4a1a120ca67a4b1e3fb027bf93cbba545d7240c5c69a2b",
+    "descriptionZh": "检查 ChatGPT Space 页面及其计划任务，建议有用的周期性工作，并创建、更新或删除定时自动化。"
+  },
+  {
+    "kind": "skill",
+    "key": "organize-space",
+    "sourceHash": "698b6418e080799c0732728ac5ecfddc8fa639e53804f967e5be499691384064",
+    "descriptionZh": "按用户要求整理现有 ChatGPT Pages 与 Space 结构。不用于普通对话草稿或建议；仅选中页面不代表授权重组。范围很小的文字修改无需此流程。"
+  },
+  {
+    "kind": "skill",
+    "key": "write-page",
+    "sourceHash": "8bc1f586aba3afef6ab933cdc04afd788c74852f56f6e63824bc65ecddae8d44",
+    "descriptionZh": "按要求创建或编辑 Page／Space 内容；也可用于已经决定保存为独立 Markdown 的正文，但用户明确要求 Markdown 文件时应尊重该格式。保留既定格式、目标位置和仓库文档约定；仅选中页面不代表写入授权。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-best-practices",
+    "sourceHash": "4f1b24826f5eae63b70b44a45f1c03b53de43e7eeb78abe1077ee25b8211f3ed",
+    "descriptionZh": "根据任务选择合适的 Remotion 专项技能。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-captions",
+    "sourceHash": "5f7ebf06a3245590dd27ac0da314f61eea1ddb55b74ce637a8db1bce59cb8723",
+    "descriptionZh": "转写、显示字幕并为字幕添加动画。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-create",
+    "sourceHash": "516b5acfd25ec4ea2e7998c1aa80ad67161d9b7f5a82de2f92e26f3855f18384",
+    "descriptionZh": "创建新的 Remotion 视频。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-docs",
+    "sourceHash": "59a3e22f3d4018b586862315e5a90cd28415375952757406d62e3bd2f3c51afd",
+    "descriptionZh": "搜索 Remotion 文档。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-interactivity",
+    "sourceHash": "87fa740dad6a2096e84654316118ca9e567b109836bf967f314592d27eef5ca9",
+    "descriptionZh": "组织适合交互的 Remotion 标记结构。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-maps",
+    "sourceHash": "c222ca5bcee2b1e2dbca25b960a3f4c950058660ffbe04060ecb8bc04fba9e9a",
+    "descriptionZh": "提供 Remotion 地图动画相关知识。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-markup",
+    "sourceHash": "377c686049df23815f182cea5f8eaff44ed9f7394ea53e915fb536eacf469175",
+    "descriptionZh": "提供内容、动画与特效的最佳实践。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-multimedia",
+    "sourceHash": "a3821c6223032311b3b629c0f671ccd37f519c89d4821bd36571de4841c0793f",
+    "descriptionZh": "使用 Mediabunny 处理多媒体。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-render",
+    "sourceHash": "2d833fe9e1c897622ca34548727bfe5da9a1476e5177f6b0dd19e7645d195582",
+    "descriptionZh": "导出 Remotion 视频。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-saas",
+    "sourceHash": "1aac29c6b3553da872f2167704c7355303d2fa1f678621ae243055ea2d340eb5",
+    "descriptionZh": "使用 Remotion 构建应用。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-studio",
+    "sourceHash": "17cda31fe72a619b20c8502a4e8cfa6bdfbaa4191edc37a48ea4f2258c026270",
+    "descriptionZh": "预览 Remotion 视频。"
+  },
+  {
+    "kind": "skill",
+    "key": "remotion-upgrade",
+    "sourceHash": "a6d7dbca2e943c41eaea34bb7c8cdd2f6585ce9011487acc9ef53072e7e3d161",
+    "descriptionZh": "升级 Remotion 及相关软件包。"
+  },
+  {
+    "kind": "skill",
+    "key": "sites",
+    "sourceHash": "4a9958ff264eff52a782f3bb9d9b34783f36b048fb850293217feb8dd7e2a455",
+    "descriptionZh": "使用 Sites 构建落地页、作品集、仪表盘、门户、追踪工具、内容中心、游戏、活动报名页或其他网站工具。也适用于修改已经用 Sites 创建的网站、发布网站和管理 Sites 托管。"
+  },
+  {
+    "kind": "skill",
+    "key": "sites-remix",
+    "sourceHash": "068f696bdb54b0e7b46a18529baabd5d9d979ac4903cbee4486a94dc5ae048a2",
+    "descriptionZh": "将使用 Sites 插件构建的现有网站改编为新站点。适用于用户已明确来源站点，并要求对其进行 remix 的情况。"
+  },
+  {
+    "kind": "skill",
+    "key": "create-pet",
+    "sourceHash": "5d7310feb426dde7d044d6b036f7d9640edc8343116ec97c92b606d5d234852b",
+    "descriptionZh": "根据角色想法、品牌元素或参考图，在 ChatGPT Work 中创建、修复、验证、预览、上传或启用 v2 动画宠物。适用于新宠物、自定义吉祥物、非像素风格，以及需要九种动画状态和十六个朝向的独立精灵图。保留 Library 产物与 Pets MCP 生命周期行为。不用于真实动物、单张图片或其他应用的宠物；调用前需确认所属场景。"
+  },
+  {
+    "kind": "skill",
+    "key": "pets",
+    "sourceHash": "9a2cfc0ef2c304ae5cdc914d30799dba8460a7699f077d4d2f67d74ca19cfc4b",
+    "descriptionZh": "列出、查看、选择、下载或删除 ChatGPT Work 中的动画宠物。适用于明确的 ChatGPT 宠物，或已有 ChatGPT Pets 对话上下文。不用于真实动物或其他应用的宠物；调用前需确认所属场景。"
+  },
+  {
+    "kind": "skill",
+    "key": "update-pet",
+    "sourceHash": "308b879402e6d049706794ced13768893d2fe770b8fa0f8036b499a13e85fabd",
+    "descriptionZh": "查看、验证、预览、修复或更新 ChatGPT Work 中的自定义宠物，包括名称、描述和精灵图。适用于 ChatGPT 宠物或已有 ChatGPT Pets 对话上下文。不用于真实动物或其他应用的宠物；调用前需确认所属场景。"
+  },
+  {
+    "kind": "skill",
+    "key": "plugin-management",
+    "sourceHash": "88dff88f9f4f6584aee4694e24a2f0d5288a5578fb16a2fd98349909d703f9f7",
+    "descriptionZh": "发现和推荐相关插件，检查应用权限与依赖，并管理插件连接或移除。适用于用户询问插件，或任务需要现有工具无法访问的外部应用、账号、服务或数据源的情况。"
+  },
+  {
+    "kind": "skill",
+    "key": "documents",
+    "sourceHash": "42c2e9ec115817a01d1b03fb5f6d968651cde5599cb7d62a1042a826f3a3a4c3",
+    "descriptionZh": "在容器内创建、编辑、修订和评论 .docx、Word 及面向 Google Docs 的文档产物，遵循渲染后核验流程。使用 render_docx.py 生成页面 PNG（可选 PDF）进行视觉检查，并反复修正排版后再交付。"
+  },
+  {
+    "kind": "skill",
+    "key": "pdf",
+    "sourceHash": "82af7795b00c47df7f1ed4eac6467ae07afae40109074e06bc7ce33f30fbd95a",
+    "descriptionZh": "在视觉版式重要时读取、创建、检查、渲染和验证 PDF，包括可填写的 AcroForm 表单。使用 Poppler 渲染，并借助 reportlab、pdfplumber、pypdf 等 Python 工具生成和提取内容。"
+  },
+  {
+    "kind": "skill",
+    "key": "Presentations",
+    "sourceHash": "77d7fb7821bfa1c0ad923c3dd21271ffbe48d0a29acf009d3c733b7070ba0535",
+    "descriptionZh": "读取、创建或编辑 Spaces 演示文稿、PowerPoint 文件与 Google Slides。适用于演示文稿、幻灯片、PowerPoint、PPT、PPTX 或 Google Slides 任务。"
+  },
+  {
+    "kind": "skill",
+    "key": "template-creator",
+    "sourceHash": "1791f4ef6d13a652a3b3886835dd716ee0389045abad67a0beff25d1d2d4da65",
+    "descriptionZh": "创建或更新可复用的个人 Codex 产物模板技能。适用于明确调用 template-creator，或要求从参考文档、演示文稿、表格、Google Docs／Slides／Sheets 链接、ImageGen／Product Design 图片、邮件、Slack 消息或 Site 项目创建可复用模板，以及更新提供的模板技能。不用于基于已有模板的一次性创作。"
+  },
+  {
+    "kind": "skill",
+    "key": "hermes",
+    "sourceHash": "c53266685760d041f1f063498bf8ea9f2c59246673fdadfe49aaca6bc492b302",
+    "descriptionZh": "使用 Hermes for Codex 三省六部协议处理复杂任务：主代理负责协调，三个任务级省级子代理负责规划、审议和执行，配合版本化契约与共享上下文、实际 Markdown TDD 产物、可见且可中断的节点、受控记忆、自我改进和脱敏回放导出。适用于明确调用 Hermes／三省六部、要求可监控协作，或需要独立规划审查的高风险多阶段任务。"
+  },
+  {
+    "kind": "skill",
+    "key": "ponytail",
+    "sourceHash": "edfc452c10c5348e3121801759f729a6d17d5cb619868788afb7ba3a3a3f3a7e",
+    "descriptionZh": "采用资深开发者的精简工作方式，以最小改动完整解决问题，并给出一遍就能理解的答复。适用于编写、修复、重构、审查和选择依赖等代码任务，以及明确要求简单方案、YAGNI 或减少过度设计的情况。支持 lite、full（默认）和 ultra 三个级别。"
+  },
+  {
+    "kind": "skill",
+    "key": "ponytail-audit",
+    "sourceHash": "89bf64bbddcaf0e9357bf9a25c27c02bc55340f34b240bd4a9af76ab1cd7d902",
+    "descriptionZh": "审查整个代码库的质量，寻找缺陷、安全漏洞、真实负载下的风险、缺少测试的高风险代码、慢路径，以及可删除、合并或拆分的内容。按优先级用易懂文字解释发现，只输出一次性报告，不修改代码。适用于全库审计、查找冗余或 ponytail-audit。"
+  },
+  {
+    "kind": "skill",
+    "key": "ponytail-debt",
+    "sourceHash": "91eb80b7fa461c55bc6dbd35ecd2020308cefc83527031f74012d8055b9c55b2",
+    "descriptionZh": "汇总全部 shortcut: 注释及旧版 ponytail: 注释，形成技术债务清单。只输出一次性报告，不作修改。适用于查看被推迟的工作、列出捷径或 ponytail-debt。"
+  },
+  {
+    "kind": "skill",
+    "key": "ponytail-gain",
+    "sourceHash": "8867ddfb4bc0c2c93c3afb1db1768db613ed830bce1946570cb569635fae0833",
+    "descriptionZh": "展示基准测试中 Ponytail 在代码量、成本和速度方面的实测节省。适用于 ponytail-gain、查看节省效果或影响，只展示一次结果。"
+  },
+  {
+    "kind": "skill",
+    "key": "ponytail-help",
+    "sourceHash": "b46a63ffbf8a27d07931bce42c2acfe37a29badece07a88886965cc2d2a736c1",
+    "descriptionZh": "提供 Ponytail 级别、技能和命令的速查说明。适用于 ponytail-help、帮助查询或了解使用方式，只展示一次结果。"
+  },
+  {
+    "kind": "skill",
+    "key": "ponytail-review",
+    "sourceHash": "d94a3c71ba9f294bbaad1d269dca45a9f9a329d236fbb17f23a1bea6f2aebd42",
+    "descriptionZh": "审查一项代码改动的逻辑、安全性、真实负载表现、高风险测试覆盖、性能，以及每行代码是否必要。阅读相关联代码而不只看 diff，并用易懂文字解释发现。适用于代码评审、最近提交或 PR 审查、检查过度设计，以及 ponytail-review。"
+  },
+  {
+    "kind": "skill",
+    "key": "index",
+    "sourceHash": "00279bfc0d598330227ccd0f631d47c252ba97fab0c5c1bed3a61ef30a616136",
+    "descriptionZh": "使用数据回答产品与业务问题，并将任务分配到合适的专项流程。适用于数据、指标、趋势、比较、驱动因素、KPI、分析、仪表盘、报告、图表、SQL、Notebook、表格、市场规模、数据质量、数据定义和可复用工作上下文，无论是否明确提及 Data。仪表盘可读取上传的表格、CSV 或 TSV，不必以表格为交付物。不用于无需这些流程的普通写作、编辑、编程或解释。"
+  },
+  {
+    "kind": "skill",
+    "key": "Spreadsheets",
+    "sourceHash": "613ff2318ce2f51fa5ffddf7f87d212d8540077d61ee7a97238844479c376208",
+    "descriptionZh": "创建、修改、分析、可视化或处理 .xlsx、.xls、.csv、.tsv 表格文件及 Google Sheets，涵盖公式、格式、图表、表格结构和重新计算。不用于实时控制 Microsoft Excel 应用或已打开的 Excel 会话。"
+  },
+  {
+    "kind": "skill",
+    "key": "excel-live-control",
+    "sourceHash": "4a607bca0d05cb18bd3aa393464d8b0e2331380ad966e45b4212ebac77768771",
+    "descriptionZh": "通过 ChatGPT 加载项或已连接的会话，控制正在打开或活动中的 Microsoft Excel 工作簿。适用于用户在 Codex 中提及 Microsoft Excel 应用，或继续已有实时 Excel 任务。不用于独立表格文件或 Google Sheets。"
+  },
+  {
+    "kind": "plugin",
+    "key": "visualize",
+    "sourceHash": "4403d6d96913a2d3a6d8d87dd749d4536a423862838154a3802ab8cfee9739b9",
+    "descriptionZh": "直接在 Codex 中创建交互式图表、地图、示意图、模拟、3D 模型、数据探索工具和界面预览。"
+  },
+  {
+    "kind": "plugin",
+    "key": "creative-production",
+    "sourceHash": "04ec41f9af74bf3991a3229228e26c1fec859c8e7cc7e24ca7eb63b47ae7b52c",
+    "descriptionZh": "探索营销活动创意、概念图、情绪板、产品植入、广告方向、商品展示图、社交内容和发布素材。"
+  },
+  {
+    "kind": "plugin",
+    "key": "data-analytics",
+    "sourceHash": "def5b25f1b8ea45bc697028e4d68a9f33d7af59262cab7874911ba7ff90f60a6",
+    "descriptionZh": "使用数据回答产品与业务问题。"
+  },
+  {
+    "kind": "plugin",
+    "key": "figma",
+    "sourceHash": "2f43b3fa6694f1f56891a130dc42a5c757497c97731a39f369b379980988074e",
+    "descriptionZh": "在 ChatGPT 和 Codex 对话中创建、审查和实现 Figma 设计。将产品界面发送到 Figma，使用设计系统组件生成可编辑图层；可与团队分享协作，再交由 Codex 在代码库中实现。也支持创建和编辑 Figma Slides 演示文稿，以及在 FigJam 中生成图表。"
+  },
+  {
+    "kind": "plugin",
+    "key": "heygen",
+    "sourceHash": "f6069cea4d0e0c9374684097ec285e9b4401b2700077697668381fbc221d7662",
+    "descriptionZh": "使用 HeyGen Video 1 制作数字人视频与通用 AI 视频，并管理 HeyGen 视频、数字人、声音、翻译和相关媒体。"
+  },
+  {
+    "kind": "plugin",
+    "key": "hyperframes",
+    "sourceHash": "199d5f41efe59274b93a9b386c8de3159d8237e83be30d3f0cac989cfab0d34f",
+    "descriptionZh": "编写 HTML 并渲染为视频，支持 HyperFrames 合成、GSAP 动画、字幕、旁白、音频响应视觉，以及网站抓取转视频。"
+  },
+  {
+    "kind": "plugin",
+    "key": "pages",
+    "sourceHash": "3db260b7988043ea32fb908ec76e1276f710c819b0ca416152346ad01970f59d",
+    "descriptionZh": "通过 ChatGPT Space 创建、读取和编辑页面与空间。"
+  },
+  {
+    "kind": "plugin",
+    "key": "remotion",
+    "sourceHash": "8b004a6bcc8fdd9652173f60feaa1103722a4564b94a19055cf3ae7eb5f8c290",
+    "descriptionZh": "使用 React 以代码方式制作 Remotion 视频，涵盖最佳实践、动画、音频、字幕、3D 等视频创作技能。"
+  },
+  {
+    "kind": "plugin",
+    "key": "sites",
+    "sourceHash": "1b848ae0dde46bdc1076415884f1ea606dcc72e496befb713d03cef137d86b2f",
+    "descriptionZh": "使用 Sites 构建和部署网站。使用须遵守 ChatGPT Sites 条款（https://openai.com/policies/chatgpt-sites-terms/），网站内容由用户负责。"
+  },
+  {
+    "kind": "plugin",
+    "key": "work-pets",
+    "sourceHash": "c5da35fd73e7e8d1a457abea631162bf83df69ea6734c6ed644bcf57b0e7c780",
+    "descriptionZh": "创建和管理在 ChatGPT Work 模式中展示的动画陪伴宠物。"
+  },
+  {
+    "kind": "plugin",
+    "key": "plugin-management",
+    "sourceHash": "4ecc76f58dceb3a0047ae90b5dbc7ddf429f27cf00ba842c105c4bead020944d",
+    "descriptionZh": "发现相关插件，管理应用连接、权限和依赖。"
+  },
+  {
+    "kind": "plugin",
+    "key": "documents",
+    "sourceHash": "a88debbe9f9d19a15e28e5ac499605111c42fa935fd531b011c61ad5e05616e1",
+    "descriptionZh": "在 Codex 中创建和编辑文档产物，包括 Word 文件和 Google Docs。"
+  },
+  {
+    "kind": "plugin",
+    "key": "pdf",
+    "sourceHash": "6509fba11205f3274ffe0a760ae37037675e2f3234f5cffccfabb89f0a8244a9",
+    "descriptionZh": "在 Codex 中读取、创建、检查、渲染和验证 PDF 文件。"
+  },
+  {
+    "kind": "plugin",
+    "key": "presentations",
+    "sourceHash": "346471959f7c5292fc48df040882840eb1484ffc26381593563daf64902b98fc",
+    "descriptionZh": "创建、编辑和验证 Spaces 演示文稿、PowerPoint 文件与 Google Slides。适用于在 Codex 中新建或修改幻灯片、演示文稿、PPT、PPTX、.ppt 或 .pptx 文件。"
+  },
+  {
+    "kind": "plugin",
+    "key": "template-creator",
+    "sourceHash": "f3393c6441478725014ec68602e5e6792966465988aa021039ca9d46051a4308",
+    "descriptionZh": "根据文件、Google Docs／Slides／Sheets 链接、ImageGen／Product Design 图片、邮件、Slack 消息和 Site 项目，创建和更新个人模板。"
+  },
+  {
+    "kind": "plugin",
+    "key": "spreadsheets",
+    "sourceHash": "99b97b857c0a69a40a1a716e0ca530a84cadabd3872807310ddb8876ffc1ffdd",
+    "descriptionZh": "在 Codex 中创建、编辑、分析、可视化、渲染和导出表格，以及适用于 Microsoft Excel 或 Google Sheets 的工作簿。"
+  },
+  {
+    "kind": "plugin",
+    "key": "hermes-codex",
+    "sourceHash": "61eb4d6f3b54b1f79a6d59c6f5c0922d86bf98d62ef0cd47ec4a0c8d88e43771",
+    "descriptionZh": "为 Codex 提供三个任务级省级代理、TDD 门禁、受控记忆，以及静默执行的低风险个人偏好叠加。"
+  },
+  {
+    "kind": "plugin",
+    "key": "ponytail",
+    "sourceHash": "de6b53dd485950698b9243e51ee46ac073d655121eac673a5cf4d5c34dd9ed1e",
+    "descriptionZh": "采用资深开发者的精简工作方式，强调可实际运行的最简单、最短方案：遵循 YAGNI，优先标准库，不引入未要求的抽象。"
+  }
+]

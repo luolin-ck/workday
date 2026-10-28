@@ -1,0 +1,13 @@
+Generated using built-in image_gen.
+
+Initial simplification (transparent_background: true):
+Use case: logo-brand, style-transfer edit.
+Edit target: the provided WorkDay app icon.
+The user dislikes the heavy, detailed icon and wants it much simpler. Redesign it into an exceptionally restrained, FLAT line-art app icon. Preserve only the recognizable calendar-plus-completion-check concept.
+Composition: one pure white rounded-square tile, flat uniform white fill, centered on a square transparent canvas. Tile about 86% of canvas width. In the center, draw a modest-size calendar outline in one solid deep forest green #253b32, with just two short binding strokes and one clean checkmark inside. The complete calendar mark should occupy only 48% of the tile width, with abundant quiet white space all around. A single consistent medium-fine stroke weight with rounded joins and caps; refined, balanced geometry and optically centered. Keep stroke sturdy enough to read at small app-icon sizes, about 5% of the calendar width. The checkmark should be light and understated, much smaller than in the reference. Calendar upper edge can double as its header: no extra rows, grids, dots or numbers.
+STRICT: entirely 2D vector-like geometry and solid color only. Absolutely no gradients, 3D, glass, glossy surfaces, bevels, embossing, lighting, highlights, rim glows, shadows, texture, perspective, or decoration. No forest-green background tile; white tile and green linework only. No text, letters, captions, watermark, mockup or alternate variants. Transparent pixels outside the rounded white tile. Produce one finished minimal app icon.
+
+Final background cleanup (transparent_background: false):
+Use case: logo-brand, precise-object-edit.
+Edit the supplied minimal WorkDay icon. Preserve exactly the central calendar-outline and small completion checkmark design, its forest-green color, shape, stroke weight, scale and centered position.
+Change only the background treatment: remove the outer rounded-square tile silhouette entirely. Make the ENTIRE square canvas perfectly uniform opaque pure white #FFFFFF, including all four corners, all margins and every edge. No transparency anywhere, no outer tile border or rounded-square outline, no shadow, no texture, no gradient, no 3D. Erase any stray flecks around the old tile edge. The result should look like a clean vector logo exported on a white artboard: just the centered single-color green calendar-and-check symbol on solid white. Do not add text or any new detail. One square logo only.

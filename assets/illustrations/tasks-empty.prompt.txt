@@ -1,0 +1,10 @@
+Mode: built-in image_gen; transparent_background: true
+
+Use case: stylized-concept.
+Asset type: a polished, compact empty-state illustration for the "no tasks" state in WorkDay, a minimal desktop productivity app. This is the illustration asset alone, not a UI screenshot.
+Subject: one elegant off-white task sheet with a softly folded corner, a small restrained powder-blue circular check seal at its lower right, and a second barely offset pale blue sheet behind it. Keep the sheet mostly blank; at most two faint short embossed horizontal marks.
+Style: premium editorial paper illustration, precise simple geometry, delicate soft shading, subtle material depth, quiet and airy. Nearly flat, no bulky extruded 3D. Crisp enough to remain legible displayed at 140px.
+Composition: a single cohesive centered object, gentle 5-degree tilt, entire silhouette visible, roughly 68% of a square canvas, ample transparent padding, balanced proportions. No scene or surrounding objects.
+Palette: warm off-white paper, very light mist blue, muted steel-blue detail, tiny soft blue accent. Suitable on both light and dark app surfaces. No heavy dark outlines.
+Background: genuine transparent alpha, no white background rectangle, no ground plane; only a very subtle tight contact shadow belonging to the object.
+Constraints: NO text, NO letters, NO numerals, NO logo, NO watermark, NO inbox/tray/box, NO large floating tick above the object, NO thick black outlines, NO sparkles, NO confetti, NO cartoon face, NO decorative clutter. Single finished asset.

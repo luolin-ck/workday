@@ -1,0 +1,9 @@
+const {McpServer}=require('@modelcontextprotocol/sdk/server/mcp.js');
+const {StdioServerTransport}=require('@modelcontextprotocol/sdk/server/stdio.js');
+const {z}=require('zod');
+const server=new McpServer({name:'WorkDay mock read-only MCP',version:'1.0.0'});
+let calls=0;
+server.tool('lookup','本地只读演示资料',{topic:z.string()},async({topic})=>({content:[{type:'text',text:JSON.stringify({topic,calls:++calls,summary:'WorkDay 是本地 AI 日历工作台。'})}]}));
+server.resource('workday-reference','workday://reference',async uri=>({contents:[{uri:uri.href,text:'这是由用户明确授权读取的本地演示资料。'}]}));
+server.prompt('brief','Generate a brief summary',async()=>({messages:[{role:'user',content:{type:'text',text:'Summarize the selected WorkDay task.'}}]}));
+server.connect(new StdioServerTransport()).catch(()=>process.exit(1));

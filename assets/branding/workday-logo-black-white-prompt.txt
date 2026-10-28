@@ -1,0 +1,7 @@
+Concept generated using built-in image_gen; production geometry implemented as workday-logo.svg.
+PNG and ICNS exports use that SVG source.
+
+Use case: logo-brand, precise-object-edit.
+Turn this exact minimal WorkDay calendar-and-check logo into its production macOS app icon in BLACK AND WHITE ONLY.
+Preserve the calendar-outline with two binding strokes and the small completion check. Change all green strokes to pure black #111111, absolutely zero hue or colored pixels. Keep uniform rounded medium-weight strokes. Enlarge the central calendar symbol moderately so it occupies 60 percent of a white rounded-square app tile. The white tile occupies 86 percent of the whole square canvas, with symmetric 7 percent exterior padding. Smooth continuous rounded-square outer boundary, perfectly clean alpha edge, no stray pixels. Transparent exterior; uniform pure white #FFFFFF tile interior.
+Flat 2D vector-like design, one clean black calendar/check symbol on white. No gradient, lighting, shadows, bevel, texture, glow, border decoration, text, dates, wordmark, mockup or additional objects. Deliver a single square app-icon master. Ensure the black check has generous clear white space between it and the calendar outline.

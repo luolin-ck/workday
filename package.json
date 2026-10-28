@@ -1,0 +1,48 @@
+{
+  "name": "workday",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luolin-ck/workday.git"
+  },
+  "description": "Local calendar and AI workspace",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "node scripts/build-project-files.cjs && node scripts/build-chat-attachments.cjs && node scripts/build-keychain-access.cjs && node scripts/build-image-gif.cjs && tsc -p tsconfig.main.json && node scripts/build-platform-capabilities.cjs && vite build",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.main.json --noEmit",
+    "test": "vitest run",
+    "start": "electron .",
+    "dev": "npm run build && electron .",
+    "smoke": "node scripts/electron-smoke.cjs",
+    "mock": "node scripts/mock-model.cjs",
+    "package:mac": "node scripts/package-mac.cjs"
+  },
+  "dependencies": {
+    "@mantine/core": "9.7.2",
+    "@mantine/hooks": "9.7.2",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "ajv": "8.20.0",
+    "lunar-typescript": "1.8.6",
+    "luxon": "3.7.2",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-markdown": "10.1.0",
+    "remark-gfm": "4.0.1",
+    "sql.js": "1.13.0",
+    "yaml": "2.8.2",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/luxon": "3.7.1",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/sql.js": "1.4.9",
+    "electron": "44.7.0",
+    "typescript": "7.0.2",
+    "vite": "8.2.1",
+    "vitest": "4.1.11"
+  }
+}

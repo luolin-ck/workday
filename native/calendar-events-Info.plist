@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleIdentifier</key><string>local.workday.desktop.calendar</string>
+<key>CFBundleName</key><string>WorkDay</string>
+<key>NSCalendarsFullAccessUsageDescription</key><string>只读取「我的日历（钉钉）」中的会议，显示在 WorkDay 月历中。不会修改日历或发送给 AI。</string>
+<key>NSCalendarsUsageDescription</key><string>只读取「我的日历（钉钉）」中的会议，显示在 WorkDay 月历中。不会修改日历或发送给 AI。</string>
+</dict></plist>
