@@ -2,15 +2,15 @@ import {app,BrowserWindow,ipcMain,dialog,safeStorage,powerMonitor,shell,Notifica
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
-import {Store} from './store';
+import {Store} from './storage/store';
 import {KeychainAccess} from './keychain-access';
-import {Credentials} from './credentials';
+import {Credentials} from './storage/credentials';
 import {AppService,type NativeDialogs} from './service';
 import {AppError,requireThat} from './validation';
 import {OPERATIONS,type Operations} from '../shared/api';
 import type {Task} from '../shared/types';
-import {TaskReminders} from './task-reminders';
-import {DesktopTaskNotifications} from './task-notifications';
+import {TaskReminders} from './calendar/task-reminders';
+import {DesktopTaskNotifications} from './calendar/task-notifications';
 app.setName('WorkDay');app.disableHardwareAcceleration();
 if(process.env.WORKDAY_DATA_DIR)app.setPath('userData',path.resolve(process.env.WORKDAY_DATA_DIR));
 if(!app.requestSingleInstanceLock()){app.quit();}else{

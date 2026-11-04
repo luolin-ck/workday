@@ -10,14 +10,15 @@
   "description": "Local calendar and AI workspace",
   "main": "dist/main/index.js",
   "scripts": {
-    "build": "node scripts/build-project-files.cjs && node scripts/build-chat-attachments.cjs && node scripts/build-keychain-access.cjs && node scripts/build-image-gif.cjs && tsc -p tsconfig.main.json && node scripts/build-platform-capabilities.cjs && vite build",
+    "build": "npm run clean && node scripts/build/build-project-files.cjs && node scripts/build/build-chat-attachments.cjs && node scripts/build/build-keychain-access.cjs && node scripts/build/build-image-gif.cjs && tsc -p tsconfig.main.json && node scripts/build/build-platform-capabilities.cjs && vite build",
     "typecheck": "tsc --noEmit && tsc -p tsconfig.main.json --noEmit",
     "test": "vitest run",
     "start": "electron .",
     "dev": "npm run build && electron .",
-    "smoke": "node scripts/electron-smoke.cjs",
-    "mock": "node scripts/mock-model.cjs",
-    "package:mac": "node scripts/package-mac.cjs"
+    "smoke": "node scripts/smoke/electron-smoke.cjs",
+    "mock": "node scripts/fixtures/mock-model.cjs",
+    "package:mac": "node scripts/release/package-mac.cjs",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\""
   },
   "dependencies": {
     "@mantine/core": "9.7.2",

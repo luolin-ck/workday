@@ -1,24 +1,25 @@
 import { ActionIcon, Button } from '@mantine/core';
 import '@mantine/core/styles.css';
-import { WorkDayProvider } from './component-theme';
+import { WorkDayProvider } from './shared/component-theme';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import type { AppState, WeatherPreference } from '../shared/types';
 import type { Operations } from '../shared/api';
-import { RuntimeContext, Hint, localDate, type Page, type Call } from './ui';
-import { Calendar, DayTasks } from './calendar';
-import { Chat } from './chat';
-import { Projects } from './projects';
-import { KnowledgePage } from './knowledge';
-import { Settings } from './settings';
-import { Schedules } from './schedules';
-import { PluginsPage } from './plugins';
-import { Icon, type IconName } from './icons';
-import { applyAppearance, defaultAppearance, readAppearance, saveAppearance, type AppearancePatch } from './appearance';
-import { createAppearanceStorage } from './appearance-storage';
-import { readWeatherPreference, saveWeatherPreference } from './weather-preference';
-import { DailyBanner } from './daily-banner';
-import { useMeetings } from './use-meetings';
+import { RuntimeContext, Hint, localDate, type Page, type Call } from './shared/ui';
+import { Calendar, DayTasks } from './calendar/calendar';
+import { Chat } from './chat/chat';
+import { Projects } from './projects/projects';
+import { ProjectSidebar } from './projects/ProjectSidebar';
+import { KnowledgePage } from './knowledge/knowledge';
+import { Settings } from './settings/settings';
+import { Schedules } from './calendar/schedules';
+import { PluginsPage } from './plugin/plugins';
+import { Icon, type IconName } from './shared/icons';
+import { applyAppearance, defaultAppearance, readAppearance, saveAppearance, type AppearancePatch } from './shared/appearance';
+import { createAppearanceStorage } from './shared/appearance-storage';
+import { readWeatherPreference, saveWeatherPreference } from './weather/weather-preference';
+import { DailyBanner } from './calendar/daily-banner';
+import { useMeetings } from './calendar/use-meetings';
 import workdayLogo from '../../assets/branding/workday-logo.svg';
 import './style.css';
 const navigation: Page[] = ['Home', '项目', '定时任务', '知识库', '插件'];
@@ -148,6 +149,8 @@ function App() {
       </Button>}
     </div></WorkDayProvider>;
   const conversationPage = page === 'Home' || page === '项目';
+  const activeConversation = state.conversations.find(chat => chat.id === chatId);
+  const currentProjectId = activeConversation ? activeConversation.projectId : projectId;
   return <WorkDayProvider appearance={appearance.theme}><RuntimeContext.Provider value={{ state, call, refresh, report: setNotice, go, openChat, browseProject }}>
     <div className="app-shell">
       <header className="titlebar">
@@ -172,7 +175,7 @@ function App() {
         <div className="primary-area">
           {page === 'Home' && <Calendar date={selectedDate} onDate={setSelectedDate} month={calendarMonth} onMonth={setCalendarMonth} meetings={meetings.result} meetingsLoading={meetings.loading} onMeetingsRefresh={meetings.refresh} />}
 
-          {page === '项目' && <Projects selected={projectId} onSelect={browseProject} activeChat={chatId} />}
+          {page === '项目' && <ProjectSidebar><Projects selected={currentProjectId} onSelect={browseProject} activeChat={chatId} /></ProjectSidebar>}
 
           {page === '知识库' && <KnowledgePage />}
 
@@ -186,7 +189,7 @@ function App() {
           <div className="daily-wrapper" hidden={page !== 'Home'}>
             <DayTasks date={selectedDate} weatherPreference={weatherPreference} meetings={meetings.result} meetingsLoading={meetings.loading} />
           </div>
-          <Chat key={page === 'Home' ? 'home' : 'conversation'} conversationId={page === 'Home' ? null : chatId} newProjectId={page === 'Home' ? newChatProjectId : projectId} date={page === 'Home' ? selectedDate : null} newDate={page === 'Home' ? selectedDate : null} onProjectChange={page === 'Home' ? setNewChatProjectId : undefined} />
+          <Chat key={page === 'Home' ? 'home' : 'conversation'} conversationId={page === 'Home' ? null : chatId} newProjectId={page === 'Home' ? newChatProjectId : currentProjectId} date={page === 'Home' ? selectedDate : null} newDate={page === 'Home' ? selectedDate : null} onProjectChange={page === 'Home' ? setNewChatProjectId : undefined} />
         </aside>
       </main>
       {notice && <div className="notification" role="alert">

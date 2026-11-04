@@ -1,6 +1,10 @@
 # 定制 WorkDay 主题
 
-主题配置入口是 [`src/renderer/theme.ts`](../src/renderer/theme.ts)。用户可在“设置 → 主题”选择黑白、蓝白、自定义；默认黑白。旧森林绿设置启动时迁移为黑白，并保留有效背景图片。
+主题配置入口是 [`src/renderer/shared/theme.ts`](../src/renderer/shared/theme.ts)。用户可在“设置 → 主题”选择黑白、蓝白、自定义；默认黑白。旧森林绿设置启动时迁移为黑白，并保留有效背景图片。
+
+蓝白预设以白色为主、浅灰分隔，[Ant Design 品牌蓝](https://ant.design/docs/spec/colors) `#1677FF` 仅用于选中、焦点、主要按钮和功能提示，悬停为 `#4096FF`，浅底强调文字为 `#0958D9`。普通卡片与输入框采用白色或中性灰底，不铺大面积浅蓝。工作台、面板、导航和插件示例区不使用装饰渐变；去掉投影和内高光，仅保留选中边框及轻微白色磨砂。`palette.mint` 用于强调填色，`palette.accent-ink` 用于填色上的白色文字和图标，`palette.accent-text` 用于浅底上的强调小字。自定义的“强调色”仍同步作用于填色和强调文字。
+
+玻璃质感集中在主面板、导航、输入区外壳和浮层等大块背景，使用 `themeDefaults.material` 控制透明度、模糊与饱和度。自定义面板色仍保存原始 hex，通过 `color-mix` 与透明色混合；背景图片模式沿用同一材质层。待办行、输入框、下拉框、页签和开关等内部控件保持平整，不添加白色内描边或独立模糊层。焦点和校验边框保留，以便识别操作状态。
 
 ## 在设置中自定义
 
@@ -62,16 +66,16 @@ mono: {
 
 `themeVariables(getTheme(id, custom))` 输出完整 CSS 自定义属性，`applyAppearance` 在首帧布局阶段写入 `document.documentElement`。这样 body 下的 Modal、Menu、Tooltip Portal 也能继承。配色沿用 `--text`、`--surface`、`--mint` 等语义名；尺度如 `--text-sm`、`--space-8`、`--radius-panel`、`--size-action`。
 
-`component-theme.tsx` 只负责 Mantine 适配，公共尺寸和排版均引用同一组变量；图标通过 `--icon-*`，弹窗、菜单和按钮通过 `--size-*`。预览用 `previewVariables(id, custom)` 从相应主题取得颜色。背景图片走 Blob 签名/解码验证，并使用独立 `--background-image`；图片 CSP 仅额外允许 `img-src blob:`。
+`src/renderer/shared/component-theme.tsx` 只负责 Mantine 适配，公共尺寸和排版均引用同一组变量；图标通过 `--icon-*`，弹窗、菜单和按钮通过 `--size-*`。预览用 `previewVariables(id, custom)` 从相应主题取得颜色。背景图片走 Blob 签名/解码验证，并使用独立 `--background-image`；图片 CSP 仅额外允许 `img-src blob:`。
 
 聊天、默认模型和定时任务共用 Mantine `Select` 模型选择器，按模型源分组，选项和已选值只显示模型名称。弹层宽度与列表最大高度由 `size.modelMenu` / `size.modelMenuMaxHeight` 控制，超长列表滚动；圆角、阴影和选中底色复用 `radius.card`、`shadow.notification`、`palette.surface-selected`。
 
-`ui.tsx` 中的共享 `Dropdown` 和 `ModelPicker` 接受 `width`：`width={240}` 使用固定 240px，`width="fill"` 铺满可用区域（默认），`width="content"` 随当前选中文字或占位文字宽度收缩。聊天使用 `content`，设置和定时任务表单默认 `fill`。内容宽度用 Electron 支持的 CSS `field-sizing:content` 计算，跟随字体和主题变化，并受父容器限宽；长名称截断，不挤出发送按钮。触发器宽度与展开菜单宽度独立。
+`src/renderer/shared/ui.tsx` 中的共享 `Dropdown` 和 `ModelPicker` 接受 `width`：`width={240}` 使用固定 240px，`width="fill"` 铺满可用区域（默认），`width="content"` 随当前选中文字或占位文字宽度收缩。聊天使用 `content`，设置和定时任务表单默认 `fill`。内容宽度用 Electron 支持的 CSS `field-sizing:content` 计算，跟随字体和主题变化，并受父容器限宽；长名称截断，不挤出发送按钮。触发器宽度与展开菜单宽度独立。
 
 ## 保留在 CSS / 素材中的部分
 
-插件、知识库和定时任务的缺省插画使用 `assets/illustrations/empty-states/` 的透明 PNG；统一显示尺寸由 `themeDefaults.size.emptyArt` 控制，底部间距复用 `space.11`。同目录 `.prompt.txt` 保存内置 imagegen 的生成提示词。
+Skill、MCP、Plugin 的图标与缺省插画分别保存在 `src/renderer/skill/assets/`、`src/renderer/mcp/assets/`、`src/renderer/plugin/assets/`，各自的 `empty.prompt.txt` 保留生图提示词；知识库、定时任务等其它缺省插画保留在 `assets/illustrations/empty-states/`。统一显示尺寸由 `themeDefaults.size.emptyArt` 控制，底部间距复用 `space.11`。天气素材位于 `src/renderer/weather/assets/`。
 
-`style.css` 保留选择器、布局（display/grid/flex）、定位关系、百分比、滚动及响应式结构。媒体查询和容器查询阈值仍是字面量，因为 CSS 自定义属性不能用于这些查询条件。日历格数、整体布局宽度、聊天跳转标记的几何、SVG 路径/viewBox、天气插画内部颜色与原始素材尺寸也保留原处。圆形的几何、透明背景和遮罩黑色不是独立主题配色。
+`src/renderer/style.css` 保留选择器、布局（display/grid/flex）、定位关系、百分比、滚动及响应式结构。媒体查询和容器查询阈值仍是字面量，因为 CSS 自定义属性不能用于这些查询条件。日历格数、整体布局宽度、聊天跳转标记的几何、SVG 路径/viewBox、天气插画内部颜色与原始素材尺寸也保留原处。圆形的几何、透明背景和遮罩黑色不是独立主题配色。
 
-定制较大的字体或间距仍需检查窄窗口的长标题、表格和弹窗。优先运行 `scripts/calendar-layout-smoke.cjs`、`scripts/public-components-smoke.cjs`、`scripts/custom-theme-smoke.cjs`（`appearance-smoke.cjs` 也会调用它；依赖 Playwright，使用隔离数据及本地天气/日历 fixture）。`scripts/theme-config-smoke.cjs` 保存与比较默认主题的 computed styles；定制用例验证真实页面和 Portal 对配置生成变量的响应。测试不能连接个人模型源或修改真实待办。
+定制较大的字体或间距仍需检查窄窗口的长标题、表格和弹窗。优先运行 `scripts/smoke/calendar-layout-smoke.cjs`、`scripts/smoke/public-components-smoke.cjs`、`scripts/smoke/custom-theme-smoke.cjs`（`scripts/smoke/appearance-smoke.cjs` 也会调用它；依赖 Playwright，使用隔离数据及本地天气/日历 fixture）。`scripts/smoke/theme-config-smoke.cjs` 保存与比较默认主题的 computed styles；定制用例验证真实页面和 Portal 对配置生成变量的响应。测试不能连接个人模型源或修改真实待办。

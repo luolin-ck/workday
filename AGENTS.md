@@ -5,8 +5,8 @@
 ## 修改前
 
 - 阅读涉及的实现、全部调用点和相关测试；确认会影响的类型、接口、表单、备份与打包路径。
-- 保留用户已有改动。复用本项目的组件、工具和依赖，用最小完整改动解决需求。
-- 颜色、字号、尺寸、间距等可定制值尽量集中在 `src/renderer/theme.ts`，组件样式引用 token；详细说明见 [主题定制](docs/theming.md)。
+- 保留用户已有改动。复用本项目的组件、工具和依赖，用最小完整改动解决需求。功能文件按所属模块归类，目录说明见 [工程结构](docs/project-structure.md)。
+- 颜色、字号、尺寸、间距等可定制值尽量集中在 `src/renderer/shared/theme.ts`，组件样式引用 token；详细说明见 [主题定制](docs/theming.md)。
 
 ## 测试先行
 
@@ -21,11 +21,11 @@
 ## 验证与数据
 
 - 常用检查：`npm run typecheck`、`npm test -- <相关测试>`、`npm run build`。按改动范围选择，并在本轮日志记下实际命令和结果。
-- Electron 测试必须设置独立 `WORKDAY_DATA_DIR`，复用 `scripts/electron-fixture-launch.cjs` 和现有 Playwright 模块。禁止向个人数据库写测试数据，禁止借烟测调用真实模型或启用个人定时任务。
+- Electron 测试必须设置独立 `WORKDAY_DATA_DIR`，复用 `scripts/fixtures/electron-fixture-launch.cjs` 和现有 Playwright 模块。禁止向个人数据库写测试数据，禁止借烟测调用真实模型或启用个人定时任务。
 - 新增日期规则放在 `src/shared/dates.ts`；执行器和月历共用，覆盖时区、夏令时、边界与持久化兼容性。
 - 更新本地应用先验证 stage，再正常退出、保留回滚包后替换。不要运行会直接覆盖 live 包的 `npm run package:mac`。实际窗口未检查或应用尚未安装时如实说明。
 - 更新后仅将正式 `release/WorkDay.app` 保留在 Launch Services 登记中；对本项目内同应用标识的 stage/回滚包执行逐路径注销，再重新登记正式包，避免系统权限页取到测试包或回滚包名称。保留回滚文件，不重置日历或钥匙串权限；操作后核对系统显示名称。
-- 更新交付后运行 `node scripts/archive-builds.cjs` 预览，再运行 `node scripts/archive-builds.cjs --apply`：只保留最新一份回滚 ZIP（`release/build-archives/`），须恢复后逐文件哈希/权限/符号链接校验通过，再删除其它测试包、历史回滚包和旧归档。仅注销登记不足以防止 Spotlight 再收录；release 中长期只保留正式 `WorkDay.app`。没有可验证的回滚包或遇运行中副本时中止，不重置全局启动器布局或权限。
+- 更新交付后运行 `node scripts/release/archive-builds.cjs` 预览，再运行 `node scripts/release/archive-builds.cjs --apply`：只保留最新一份回滚 ZIP（`release/build-archives/`），须恢复后逐文件哈希/权限/符号链接校验通过，再删除其它测试包、历史回滚包和旧归档。仅注销登记不足以防止 Spotlight 再收录；release 中长期只保留正式 `WorkDay.app`。没有可验证的回滚包或遇运行中副本时中止，不重置全局启动器布局或权限。
 - 不把凭证、个人任务内容或敏感模型消息写入测试、截图和日志。用户另行要求的流程记录遵循上级目录约束，不复制到业务项目。
 
 ## 每次迭代

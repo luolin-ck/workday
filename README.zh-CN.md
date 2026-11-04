@@ -58,7 +58,7 @@ npm run mock
 ### 生成 Plugin 示例
 
 ```sh
-node scripts/create-example.cjs
+node scripts/tools/create-example.cjs
 ```
 
 命令会生成 `examples/summary-plugin`，包含摘要 Skill 与本地模拟 MCP 连接。生成配置会写入当前 Node 程序和工程路径，因此不提交到 Git；移动工程后需要重新生成。在 Plugin 页面导入生成的文件夹，MCP 仍保持停用，只有明确启用、发现并授权后才可使用。
@@ -73,7 +73,7 @@ npm run build
 
 测试使用合成夹具；部分集成测试需要监听本机回环地址，原生 helper 测试还需要 macOS 开发工具。测试和应用数据、生成的构建及验证输出均不提交到 Git。
 
-七项历史平台副本检查依赖可选的本机第三方夹具；该夹具在确认再分发许可前不纳入仓库，因此全新克隆会明确跳过这七项。独立的平台权限测试仍会运行，详见[夹具覆盖说明](tests/fixtures/platform-copies/README.md)。当前开发基线还存在损坏历史提交和缺失主题 CSS 变量的已知失败检查，`npm test` 尚未全部通过。
+七项历史平台副本检查依赖可选的本机第三方夹具；该夹具在确认再分发许可前不纳入仓库，因此全新克隆会明确跳过这七项。独立的平台权限测试仍会运行，详见[夹具覆盖说明](tests/fixtures/platform-copies/README.md)。当前开发基线仍存在损坏历史提交的已知失败检查，`npm test` 尚未全部通过。
 
 可选桌面烟测使用 Playwright 的 Electron API：
 
@@ -106,14 +106,15 @@ npm run smoke
 
 | 路径 | 用途 |
 | --- | --- |
-| `src/main/` | Electron 服务、持久化、模型请求、项目访问和扩展 |
+| `src/main/` | Electron 入口及 `skill/`、`mcp/`、`plugin/`、`chat/`、`projects/` 等功能目录 |
 | `src/preload/` | 渲染器桥接 |
-| `src/renderer/` | React 界面、主题与交互 |
+| `src/renderer/` | React 功能页面、所属素材与共享组件/主题 |
 | `src/shared/` | 共享类型、协议与日期规则 |
 | `native/` | macOS Swift helper 源码 |
-| `tests/` 与 `scripts/` | 测试、夹具、构建与验证工具 |
+| `tests/` | 按功能分类的测试，共享夹具保留在 `tests/fixtures/` |
+| `scripts/` | 构建、发布、夹具、烟测、浏览器验证与开发工具 |
 
-参与开发前请阅读[开发约定](AGENTS.md)，实现细节可参考[主题定制](docs/theming.md)和[平台能力说明](docs/platform-capabilities.md)。提交中不要包含凭证、个人数据、生成产物或本机验证输出。欢迎修复和文档改进，项目仍在推进第一版。
+模块归属、入口和命令见[工程结构](docs/project-structure.md)。参与开发前请阅读[开发约定](AGENTS.md)，实现细节可参考[主题定制](docs/theming.md)和[平台能力说明](docs/platform-capabilities.md)。提交中不要包含凭证、个人数据、生成产物或本机验证输出。欢迎修复和文档改进，项目仍在推进第一版。
 
 ## 开源协议
 

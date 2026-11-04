@@ -58,7 +58,7 @@ This is an explicit local simulation, not a real AI model. Stop it with Ctrl+C. 
 ### Generate the example Plugin
 
 ```sh
-node scripts/create-example.cjs
+node scripts/tools/create-example.cjs
 ```
 
 This creates `examples/summary-plugin` with a summary Skill and a local mock MCP connection. The generated configuration contains the current Node executable and project paths, so it is excluded from Git and must be regenerated after moving the checkout. Import the generated folder through the Plugin page. Its MCP connection remains disabled until explicitly enabled, discovered, and authorized.
@@ -73,7 +73,7 @@ npm run build
 
 Tests use synthetic fixtures; some integration tests need local loopback listeners, and native helper tests need the macOS development tools. Test and application data, generated builds, and verification output are excluded from Git.
 
-Seven legacy platform-copy checks require an optional local third-party fixture that is excluded pending redistribution review; a clean clone explicitly skips those checks. Independent platform permission tests still run. See the [fixture coverage note](tests/fixtures/platform-copies/README.md). The current development baseline also has known failing checks for corrupt-history submission and a missing theme CSS variable; `npm test` is not yet fully passing.
+Seven legacy platform-copy checks require an optional local third-party fixture that is excluded pending redistribution review; a clean clone explicitly skips those checks. Independent platform permission tests still run. See the [fixture coverage note](tests/fixtures/platform-copies/README.md). The current development baseline still has a known failing check for corrupt-history submission; `npm test` is not yet fully passing.
 
 The optional desktop smoke check uses Playwright's Electron API:
 
@@ -106,14 +106,15 @@ The package's `0.1.0` value is development metadata, not an announced release. T
 
 | Path | Purpose |
 | --- | --- |
-| `src/main/` | Electron services, persistence, model requests, project access, and extensions |
+| `src/main/` | Electron entry points and feature folders such as `skill/`, `mcp/`, `plugin/`, `chat/`, and `projects/` |
 | `src/preload/` | Renderer bridge |
-| `src/renderer/` | React interface, themes, and interaction |
+| `src/renderer/` | React feature folders, their assets, and shared UI/theme components |
 | `src/shared/` | Shared types, protocols, and date rules |
 | `native/` | macOS Swift helper sources |
-| `tests/` and `scripts/` | Tests, fixtures, build, and verification tools |
+| `tests/` | Tests grouped by feature; shared fixtures stay in `tests/fixtures/` |
+| `scripts/` | Build, release, fixture, smoke, browser, and development tools |
 
-Before contributing, read the [development conventions](AGENTS.md). See [theme customization](docs/theming.md) and [platform capabilities](docs/platform-capabilities.md) for implementation details. Keep credentials, personal data, generated artifacts, and local verification output out of commits. Development fixes and documentation improvements are welcome; the project is still working toward its first version.
+See the [project structure guide](docs/project-structure.md) for module ownership, entry points, and commands. Before contributing, read the [development conventions](AGENTS.md). See [theme customization](docs/theming.md) and [platform capabilities](docs/platform-capabilities.md) for implementation details. Keep credentials, personal data, generated artifacts, and local verification output out of commits. Development fixes and documentation improvements are welcome; the project is still working toward its first version.
 
 ## License
 
